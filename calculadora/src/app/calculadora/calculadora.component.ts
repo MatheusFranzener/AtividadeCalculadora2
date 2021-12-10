@@ -17,7 +17,9 @@ export class CalculadoraComponent implements OnInit {
   pegarValor(evento) {   /* vai realizar as operações quando clicar na div '=' */
     if (evento == "=") {
       this.resultado = eval(this.resultado);
-    } else {
+    } else if(evento == "AC") {
+      this.resultado = ""; /* limpa o visor */
+    } else{
       this.resultado += evento;
     }
   }
