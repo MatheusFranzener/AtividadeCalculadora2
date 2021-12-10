@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'app-visor',
@@ -6,8 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./visor.component.css']
 })
 export class VisorComponent implements OnInit {
-
   constructor() { }
+
+  @Input() valorVisor;
 
   ngOnInit() {
   }

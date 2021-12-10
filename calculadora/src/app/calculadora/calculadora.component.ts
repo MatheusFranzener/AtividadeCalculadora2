@@ -12,4 +12,16 @@ export class CalculadoraComponent implements OnInit {
   ngOnInit() {
   }
 
+  resultado = "";
+
+  pegarValor(evento) {   /* vai realizar as operações quando clicar na div '=' */
+    if (evento == "=") {
+      this.resultado = eval(this.resultado);
+    } else {
+      this.resultado += evento;
+    }
+  }
+
+
+
 }

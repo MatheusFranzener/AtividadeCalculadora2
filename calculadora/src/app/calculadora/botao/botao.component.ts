@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter   } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-botao',
@@ -9,13 +9,13 @@ export class BotaoComponent implements OnInit {
   constructor() { }
 
   @Input() valor;
-  @Output() clickBotao = new EventEmitter<any>();
+  @Output() clickBotao = new EventEmitter<string>();
 
   ngOnInit() {
   }
 
-  clicouNaDiv(){
-    this.clickBotao.emit({nome:'Matheus'});
+  clicouNaDiv(evento){
+    this.clickBotao.emit(evento);
   }
 
 }

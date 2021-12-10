@@ -1,24 +1,33 @@
 <div>
   <app-linha>
-    <app-visor></app-visor>
+    <app-visor [valorVisor] = "resultado"></app-visor> <!-- coloca o input no visor e passa nele o resultado (controle) -->
   </app-linha>
 
   <app-linha>
-    <app-botao [valor] = "'0'"></app-botao> 
-    <app-botao [valor] = "'1'"></app-botao>
-    <app-botao [valor] = "'2'"></app-botao>
-    <app-botao [valor] = "'3'"></app-botao>
-    <app-botao [valor] = "'4'"></app-botao>
-    <app-botao [valor] = "'5'"></app-botao>
-    <app-botao [valor] = "'6'"></app-botao>
-    <app-botao [valor] = "'7'"></app-botao>
-    <app-botao [valor] = "'8'"></app-botao>
-    <app-botao [valor] = "'9'"></app-botao>
-    <app-botao [valor] = "'+'"></app-botao>
-    <app-botao [valor] = "'-'"></app-botao>
-    <app-botao [valor] = "'x'"></app-botao>
-    <app-botao [valor] = "'='"></app-botao>
-    <app-botao [valor] = "'/'"></app-botao>
+    <app-botao [valor] = "'7'" (clickBotao) = "pegarValor($event)"></app-botao> <!-- passa um valor ao input e depois pega esse valor através do click -->
+    <app-botao [valor] = "'8'" (clickBotao) = "pegarValor($event)"></app-botao>
+    <app-botao [valor] = "'9'" (clickBotao) = "pegarValor($event)"></app-botao>
+    <app-botao [valor] = "'/'" (clickBotao) = "pegarValor($event)"></app-botao>
+  </app-linha>
+
+  <app-linha>
+    <app-botao [valor] = "'4'" (clickBotao) = "pegarValor($event)"></app-botao>
+    <app-botao [valor] = "'5'" (clickBotao) = "pegarValor($event)"></app-botao>
+    <app-botao [valor] = "'6'" (clickBotao) = "pegarValor($event)"></app-botao>
+    <app-botao [valor] = "'*'" (clickBotao) = "pegarValor($event)"></app-botao>
+  </app-linha>
+
+  <app-linha>
+    <app-botao [valor] = "'1'" (clickBotao) = "pegarValor($event)"></app-botao>
+    <app-botao [valor] = "'2'" (clickBotao) = "pegarValor($event)"></app-botao>
+    <app-botao [valor] = "'3'" (clickBotao) = "pegarValor($event)"></app-botao>
+    <app-botao [valor] = "'+'" (clickBotao) = "pegarValor($event)"></app-botao>
+  </app-linha>
+
+  <app-linha>
+    <app-botao [valor] = "'0'" (clickBotao) = "pegarValor($event)"></app-botao> 
+    <app-botao [valor] = "'-'" (clickBotao) = "pegarValor($event)"></app-botao>
+    <app-botao [valor] = "'='" (clickBotao) = "pegarValor($event)"></app-botao>
   </app-linha>
 
 </div>
